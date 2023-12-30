@@ -1,0 +1,12 @@
+node_modules
+.git
+*.debug
+_DEBUG_
+_DEBUG_.*
+*.zip
+*.tar.gz
+*.tar
+*.sql
+*.js.map
+*.css.map
+*.LICENSE.txt
