@@ -1,0 +1,157 @@
+@mixin media-max-xs() {
+    @media (max-width: $max_xs) {
+        @content;
+    }
+}
+
+@mixin media-min-xs() {
+    @media (min-width: $min_xs) {
+        @content;
+    }
+}
+
+@mixin media-max-s() {
+    @media (max-width: $max_s) {
+        @content;
+    }
+}
+
+@mixin media-min-s() {
+    @media (min-width: $min_s) {
+        @content;
+    }
+}
+
+@mixin media-max-sm() {
+    @media (max-width: $max_sm) {
+        @content;
+    }
+}
+
+@mixin media-min-sm() {
+    @media (min-width: $min_sm) {
+        @content;
+    }
+}
+
+@mixin media-max-md() {
+    @media (max-width: $max_md) {
+        @content;
+    }
+}
+
+@mixin media-min-md() {
+    @media (min-width: $min_md) {
+        @content;
+    }
+}
+
+@mixin media-max-ml() {
+    @media (max-width: $max_ml) {
+        @content;
+    }
+}
+
+@mixin media-min-ml() {
+    @media (min-width: $min_ml) {
+        @content;
+    }
+}
+
+@mixin media-max-lg() {
+    @media (max-width: $max_lg) {
+        @content;
+    }
+}
+
+@mixin media-min-lg() {
+    @media (min-width: $min_lg) {
+        @content;
+    }
+}
+
+@mixin media-max-xl() {
+    @media (max-width: $max_xl) {
+        @content;
+    }
+}
+
+@mixin media-min-xl() {
+    @media (min-width: $min_xl) {
+        @content;
+    }
+}
+
+@mixin media-max-xxl() {
+    @media (max-width: $max_xxl) {
+        @content;
+    }
+}
+
+@mixin media-min-xxl() {
+    @media (min-width: $min_xxl) {
+        @content;
+    }
+}
+
+@mixin media-min-adapt() {
+    @media (min-width: $adapt) {
+        @content;
+    }
+}
+
+@mixin media-max-custom($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-min-custom($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-max-custom-h($size) {
+    @media (max-height: $size) {
+        @content;
+    }
+}
+@mixin media-min-custom-h($size) {
+    @media (min-height: $size) {
+        @content;
+    }
+}
+
+@mixin media-range-width($minW, $maxW) {
+    @media (min-width: $minW) and (max-width: $maxW)  {
+        @content;
+    }
+}
+
+@mixin media-range( $width, $height, $maxMinWidth: 'max',  $maxMinHeight: 'max',) {
+    @if  ($maxMinWidth == 'max' and $maxMinHeight == "max") {
+        @media (max-width: $width)  and (max-height: $height) {
+            @content;
+        }
+    }
+
+    @if  ($maxMinWidth == 'max' and $maxMinHeight == "min") {
+        @media (max-width: $width)  and (min-height: $height) {
+            @content;
+        }
+    }
+
+    @if  ($maxMinWidth == 'min' and $maxMinHeight == "max") {
+        @media (min-width: $width)  and (max-height: $height) {
+            @content;
+        }
+    }
+
+    @if  ($maxMinWidth == 'min' and $maxMinHeight == "min") {
+        @media (min-width: $width)  and (min-height: $height) {
+            @content;
+        }
+    }
+  
+}

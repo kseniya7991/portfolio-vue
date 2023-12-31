@@ -1,0 +1,26 @@
+.container {
+    @include size(100%, 100%);
+    @include flex(column, stretch, stretch);
+    @include max-size($w-content);
+    padding-inline: $p-i-content;
+
+    @include media-max-md() {
+        padding-inline: $p-i-content__md;
+    }
+
+    @include media-max-s() {
+        padding-inline: $p-i-content__s;
+    }
+}
+
+.section {
+    padding-block: 120px;
+
+    @include media-max-md() {
+        padding-block: 60px;
+    }
+
+    @include media-max-s() {
+        padding-block: 60px;
+    }
+}

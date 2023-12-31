@@ -1,0 +1,17 @@
+%hover-underline-white {
+    @include position(relative);
+
+    &::after {
+        content: "";
+        @include position(absolute, $top: 100%, $left: 0);
+        @include size(0px, 1px);
+        @include bg-color($color-white);
+        @include transition(width);
+    }
+
+    @include hover {
+        &::after {
+            @include size(100%);
+        }
+    }
+}

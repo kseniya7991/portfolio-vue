@@ -1,9 +1,9 @@
-import Header from "@/components/Header/Header.vue";
+import MainHeader from "@/components/Header/MainHeader.vue";
 import HeaderLogo from "@/components/Header/HeaderLogo.vue";
 import HeaderNav from "@/components/Header/HeaderNav.vue";
 
 export default [
-    Header,
+    MainHeader,
     HeaderLogo,
     HeaderNav
 ];
