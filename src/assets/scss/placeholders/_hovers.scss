@@ -3,9 +3,9 @@
 
     &::after {
         content: "";
-        @include position(absolute, $top: 100%, $left: 0);
+        @include position(absolute, $top: calc(100% + 5px), $left: 0);
         @include size(0px, 1px);
-        @include bg-color($color-white);
+        @include bg-color($white);
         @include transition(width);
     }
 

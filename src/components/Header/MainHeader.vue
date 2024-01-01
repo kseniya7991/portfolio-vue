@@ -23,10 +23,18 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .header {
+    @include bg-color($black);
+    @include position(sticky, $top: 0);
+    z-index: $z-index-header;
+
     &__wrap {
         @include flex(row, flex-start, center);
         padding-block: 20px;
-        @include color($color-white);
+        @include color($white);
+
+        .btn {
+            margin-left: 40px;
+        }
     }
 }
 </style>

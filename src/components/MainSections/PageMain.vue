@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    main
+    <MainHero />
   </main>
 </template>
 

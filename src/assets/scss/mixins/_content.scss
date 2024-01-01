@@ -1,0 +1,86 @@
+@mixin image-wrap($width: null, $height: null, $fit: contain) {
+    @include flex-inline(null, center, center);
+    @include flex-filling($shrink: 0);
+
+    @if $width != null {
+        @include size($width);
+    }
+
+    @if $height != null {
+        @include size(null, $height);
+    }
+
+    picture {
+        @include size(100%, 100%);
+    }
+
+    img,
+    source {
+        @if $fit == contain {
+            @extend %img-contain;
+        }
+
+        @if $fit == cover {
+            @extend %img-cover;
+        }
+
+        @content;
+    }
+}
+
+@mixin svg-wrap($width: null, $height: null) {
+    @include flex-inline(null, center, center);
+    @include flex-filling($shrink: 0);
+
+    @if $width != null {
+        @include size($width);
+    }
+
+    @if $height != null {
+        @include size(null, $height);
+    }
+
+    svg {
+        @extend %svg-fill;
+
+        @content;
+    }
+}
+
+@mixin image-proportions-wrap($width: 16px, $height: 9px, $fit: cover) {
+    @include position(relative);
+
+    &::before {
+        content: "";
+        padding-top: calc(($height / $width) * 100%);
+        display: block;
+        @include size(100%);
+    }
+
+    img {
+        @include position(absolute, $top: 0, $left: 0);
+        @include size(100%, 100%);
+        object-fit: $fit;
+    }
+}
+
+@mixin image-proportions-change($width: 16px, $height: 9px) {
+    &::before {
+        padding-top: calc(($height / $width) * 100%);
+    }
+}
+
+@mixin center-absolute() {
+    @include position(absolute, $top: 50%, $left: 50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-v() {
+    @include position(absolute, $top: 50%);
+    transform: translateY(-50%);
+}
+
+@mixin center-absolute-h() {
+    @include position(absolute, $left: 50%);
+    transform: translateX(-50%);
+}

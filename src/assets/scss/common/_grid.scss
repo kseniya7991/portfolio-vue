@@ -3,6 +3,7 @@
     @include flex(column, stretch, stretch);
     @include max-size($w-content);
     padding-inline: $p-i-content;
+    margin-inline: auto;
 
     @include media-max-md() {
         padding-inline: $p-i-content__md;

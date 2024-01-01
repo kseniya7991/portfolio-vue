@@ -1,3 +1,11 @@
 %text-default {
     @include font(16px, 1.2, 400);
 }
+
+%text-s {
+    @include font(14px, 1.2, 400);
+}
+
+%text-xs {
+    @include font(12px, 1.2, 400);
+}

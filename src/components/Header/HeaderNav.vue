@@ -41,8 +41,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .nav {
     margin-left: 100px;
+    margin-right: auto;;
+    @include size(100%);
+
     &__list {
-        @include flex(row,flex-start,center, 20px);
+        @include size(100%);
+        @include max-size(400px);
+        @include flex(row,space-between,center, 40px);
     }
     &__link {
         @extend %hover-underline-white;

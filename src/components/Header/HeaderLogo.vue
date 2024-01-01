@@ -18,7 +18,7 @@ export default defineComponent({
 .header {
     &__logo {
         @include font(20px, 1.2,500);
-        @include color($color-white);
+        @include color($white);
         text-transform: uppercase;
     }
 }

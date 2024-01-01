@@ -10,10 +10,19 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "App",
-    components: {
-    },
+    components: {},
 });
 </script>
 
 <style lang="scss">
+#app {
+    @extend %font-montserrat;
+    @include bg-color($black);
+
+    @extend %text-default;
+
+    button {
+        @extend %font-montserrat;
+    }
+}
 </style>
